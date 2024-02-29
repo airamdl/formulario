@@ -1,0 +1,300 @@
+* { 
+    box-sizing: border-box; 
+    padding: 0;
+    margin: 0;
+}
+#navigation {
+  width: 100%;
+  height: 55px;
+  position: fixed;
+  background: linear-gradient(#4D3414, #221506);
+  top: 0;
+  z-index: 1000; /* Agrega un valor de z-index adecuado */
+}
+
+.nes{
+  padding-left: 11em;
+  padding-top: 8px;
+  postition: fixed;
+  
+  
+}
+.games {
+  display: inline;
+  padding: 20px;
+}
+
+.productos {
+  display: inline;
+  padding: 20px;
+}
+
+.personajes  {
+  display: inline;
+  padding: 20px;
+}
+.index {
+  display: inline;
+  padding: 20px;
+}
+.contacto{
+  display: inline;
+  padding: 20px;
+}
+
+.videos{
+  display: inline;
+  padding: 20px;
+}
+.galeria{
+  display: inline;
+  padding: 20px;
+}
+.lista{
+  display: inline;
+  padding: 20px;
+}
+
+
+.navitems {
+  color: white;
+  padding-top: 10px;
+  padding-right: 10em;
+  float: right;
+  font-family: tahoma;
+  overflow: cover;
+  margin: 0 auto;
+  
+}
+
+a:link.link {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+a:visited.link {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+a:hover.link {
+  color: #0e5135;
+  text-decoration: none;
+}
+
+a:active.selector_name {
+  color: #003300;
+  text-decoration: none;
+}
+/* meadiquery nav */
+@media screen and (max-width: 700px) {
+.navitems {
+    display: none;
+}
+
+.hamburger-menu {
+    display: block;
+    cursor: pointer;
+    padding: 20px;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #FFF;
+    margin: 6px 0;
+}
+
+.mobile-menu {
+    display: none;
+    background: linear-gradient(#4D3414, #221506);
+    position: fixed;
+    top: 55px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.mobile-menu a {
+    display: block;
+    padding: 20px;
+    color: white;
+    text-decoration: none;
+}
+}
+body{
+  background-color: gainsboro;
+}
+
+table{
+  margin-top: 200px ;
+}
+
+  /* main */
+.video{
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 80px;
+}
+#vidtop-content {
+  top: 0;
+  color: #fff;
+}
+.vid-info { 
+    position: absolute;
+    top: 0; 
+    right: 0; 
+    width: 33%; 
+    background: rgba(0,0,0,0.3); 
+    color: #fff; 
+    padding: 1rem; 
+    font-family: Avenir, 
+    Helvetica, sans-serif; 
+}
+.vid-info h1 {
+     font-size: 2rem; 
+     font-weight: 700; 
+     margin-top: 0; 
+     line-height: 1.2; 
+    }
+.vid-info a {
+    display: block; 
+    color: #fff; 
+    text-decoration: none; 
+    background: rgba(0,0,0,0.5);
+     transition: .6s background; 
+     border-bottom: none; 
+     margin: 1rem auto; 
+     text-align: center; 
+    }
+
+@media (min-aspect-ratio: 16/9) {
+  .video-foreground { 
+    height: 300%; 
+    top: -100%;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .video-foreground { 
+    width: 300%; 
+    left: -100%; 
+    }
+}
+
+@media all and (max-width: 600px) {
+.vid-info { 
+    width: 50%; 
+    padding: .5rem;
+    }
+.vid-info h1 { 
+    margin-bottom: .2rem;
+    }
+}
+
+@media all and (max-width: 500px) {
+.vid-info .acronym {
+     display: none; 
+    }
+}
+
+/* footer */
+footer{
+    background: linear-gradient(#4D3414, #221506);
+    padding: 15px;
+}
+
+
+  .rounded-social-buttons {
+    text-align: center;
+  }
+  
+  .rounded-social-buttons .social-button {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    width: 3.125rem;
+    height: 3.125rem;
+    border: 0.125rem solid transparent;
+    padding: 0;
+    text-decoration: none;
+    text-align: center;
+    color: #fefefe;
+    font-size: 1.5625rem;
+    font-weight: normal;
+    line-height: 2em;
+    border-radius: 1.6875rem;
+    transition: all 0.5s ease;
+    margin-right: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .rounded-social-buttons .social-button:hover, .rounded-social-buttons .social-button:focus {
+    -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  
+  .rounded-social-buttons .fa-twitter, .fa-facebook-f, .fa-linkedin, .fa-tiktok, .fa-youtube, .fa-instagram {
+    font-size: 25px;
+  }
+  
+  .rounded-social-buttons .social-button.facebook {
+    background: #3b5998;
+  }
+  
+  .rounded-social-buttons .social-button.facebook:hover, .rounded-social-buttons .social-button.facebook:focus {
+    color: #3b5998;
+    background: #fefefe;
+    border-color: #3b5998;
+  }
+  
+  .rounded-social-buttons .social-button.twitter {
+    background: #55acee;
+  }
+  
+  .rounded-social-buttons .social-button.twitter:hover, .rounded-social-buttons .social-button.twitter:focus {
+    color: #55acee;
+    background: #fefefe;
+    border-color: #55acee;
+  }
+  
+  .rounded-social-buttons .social-button.linkedin {
+    background: #007bb5;
+  }
+  
+  .rounded-social-buttons .social-button.linkedin:hover, .rounded-social-buttons .social-button.linkedin:focus {
+    color: #007bb5;
+    background: #fefefe;
+    border-color: #007bb5;
+  }
+  
+  .rounded-social-buttons .social-button.tiktok {
+    background: #000000;
+  }
+  
+  .rounded-social-buttons .social-button.tiktok:hover, .rounded-social-buttons .social-button.tiktok:focus {
+    color: #000000;
+    background: #fefefe;
+    border-color: #000000;
+  }
+  
+  .rounded-social-buttons .social-button.youtube {
+    background: #bb0000;
+  }
+  
+  .rounded-social-buttons .social-button.youtube:hover, .rounded-social-buttons .social-button.youtube:focus {
+    color: #bb0000;
+    background: #fefefe;
+    border-color: #bb0000;
+  }
+  
+  .rounded-social-buttons .social-button.instagram {
+    background: #125688;
+  }
+  
+  .rounded-social-buttons .social-button.instagram:hover, .rounded-social-buttons .social-button.instagram:focus {
+    color: #125688;
+    background: #fefefe;
+    border-color: #125688;
+  }  

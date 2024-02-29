@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>bienvenida</title>
+</head>
+<body>
+
+<script>
+   
+    const name = localStorage.getItem('name');
+    const backgroundColor = localStorage.getItem('background-color');
+    const textColor = localStorage.getItem('text-color');
+    
+    if (name && backgroundColor && textColor) {
+        document.body.style.backgroundColor = backgroundColor;
+        document.body.style.color = textColor;
+        document.body.style.fontSize = "66px";
+        document.body.style.display = "flex";
+        document.body.style.flexDirection = "column";
+        document.body.style.justifyContent = "center";
+        document.body.style.alignItems = "center";
+        document.body.innerHTML = `<h1>Buenas, ${name}! espero que se encuentre bien</h1><button onclick="clearPreferences()"
+        style="font-size: 16px; padding: 10px; border-radius: 1em; background-color: white;">Borrar preferencias</button>`;
+    } else {
+        window.location.href = 'preferencias.html';
+    }
+    
+    function clearPreferences() {
+        localStorage.removeItem('name');
+        localStorage.removeItem('background-color');
+        localStorage.removeItem('text-color');
+        window.location.href = 'preferencias.html'; 
+    }
+</script>
+</body>
+</html>

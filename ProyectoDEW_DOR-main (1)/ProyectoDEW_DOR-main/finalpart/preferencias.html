@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Preferencias de Usuario</title>
+<link rel="stylesheet" href="./css/preferencias.css">
+</head>
+<body>
+    <header>
+        <div id="navigation">
+          <div class="nes"> <a href="../index.html" target="_blank"><img src="http://i1168.photobucket.com/albums/r483/erica__Fletcher/Untitled-1_zpsfk9b0ih1.png" width="40px" height="40px"></a>
+            
+            
+              <div class="navitems">
+                <div class="index"> <a class="link" href="../index.html">Inicio</a>
+                </div>
+                <div class="geo"> <a class="link" href="geolocalizacion.html">Geolocalización</a>
+                </div>
+                <div class="preferencias"> <a class="link" href="preferencias.html">Preferencias</a>
+                </div>
+                <div class="video"> <a class="link" href="./video.html">Video</a>
+                </div>
+                <div class="form"> <a class="link" href="./form.html">Formulario</a>
+                </div>
+                <div class="index"> <a class="link" href="./indexdb.html">indexdb</a>
+                </div>
+                <div class="cookies"> <a class="link" href="./cookies.html">Cookies</a>
+                </div>
+              </div>
+          </div>
+      </header>
+
+    <!-- <div class="Cookies">
+        <div id="cookieDialog" class="cookie-dialog">
+            <p>¿Aceptas el uso de cookies?</p>
+            <div class="buttonsc">
+                <button id="acceptCookies">Aceptar</button>
+                <button id="rejectCookies">Rechazar</button>
+            </div>
+        </div>
+    </div> -->
+    <!-- <div class="Cookies">
+        <div id="cookieDialog" class="cookie-dialog">
+            <p>¿Aceptas el uso de cookies?</p>
+            <div class="buttonsc">
+                <button id="acceptCookies">Aceptar</button>
+                <button id="rejectCookies">Rechazar</button>
+            </div>
+        </div>
+    </div> -->
+    <div class="caja">
+<h1>Preferencias de Usuario</h1>
+<form id="preferences-form">
+    <label for="name">Nombre:</label>
+    <input type="text" id="name" required><br><br>
+    
+    <label for="background-color">Color de fondo:</label>
+    <input type="color" id="background-color" required><br><br>
+    
+    <label for="text-color">Color de letra:</label>
+    <input type="color" id="text-color" required><br><br>
+    
+    <button type="submit">Guardar preferencias</button><br><br>
+</form>
+<a href="../index.html"><button type="button">Inicio</button></a>
+</div>
+
+
+
+
+
+
+
+
+
+<script>
+document.getElementById('preferences-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const name = document.getElementById('name').value;
+    const backgroundColor = document.getElementById('background-color').value;
+    const textColor = document.getElementById('text-color').value;
+    
+    localStorage.setItem('name', name);
+    localStorage.setItem('background-color', backgroundColor);
+    localStorage.setItem('text-color', textColor);
+    
+    window.location.href = 'bienvenida.html'; 
+});
+
+
+// function getAccessCount() {
+//     var accessCount = localStorage.getItem("accessCount");
+//     if (accessCount) {
+//         return parseInt(accessCount);
+//     } else {
+//         return 0;
+//     }
+// }
+
+// // Función para incrementar el contador de acceso y almacenarlo en localStorage
+// function incrementAccessCount() {
+//     var accessCount = getAccessCount();
+//     accessCount++;
+//     localStorage.setItem("accessCount", accessCount);
+// }
+
+// // Incrementar el contador de acceso cada vez que se carga la página
+// incrementAccessCount();
+
+// document.addEventListener("DOMContentLoaded", function() {
+//     var cookieDialog = document.getElementById("cookieDialog");
+//     var acceptCookiesBtn = document.getElementById("acceptCookies");
+//     var rejectCookiesBtn = document.getElementById("rejectCookies");
+
+//     var cookiesAccepted = localStorage.getItem("cookiesAccepted");
+
+//     if (!cookiesAccepted) {
+//         cookieDialog.style.display = "block";
+//     }
+
+//     acceptCookiesBtn.addEventListener("click", function() {
+//         localStorage.setItem("cookiesAccepted", true);
+//         cookieDialog.style.display = "none";
+//     });
+
+//     rejectCookiesBtn.addEventListener("click", function() {
+//         localStorage.setItem("cookiesAccepted", false);
+//         cookieDialog.style.display = "none";
+//     });
+// });
+
+
+</script>
+</body>
+</html>

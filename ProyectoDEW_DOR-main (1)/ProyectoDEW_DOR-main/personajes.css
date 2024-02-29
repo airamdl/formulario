@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(img/background.jpg);
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(20px);
+    overflow: hidden;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    width: 800px;
+    height: 500px;
+    transition: 0.5s;
+}
+
+.box{
+    background: var(--image);
+    background-position: center;
+    background-size: cover;
+    transition: 0.5s;
+    border-radius: 50px;
+}
+
+.container:hover .box{
+    filter: grayscale(1);
+}
+
+.container .box:hover{
+    filter: grayscale(0);
+}
+
+
+/* DESPLAZAMIENTO DE LAS CAJAS */
+
+.container:has(.one:hover){
+    grid-template-columns: 2fr 0.5fr 0.5fr 0.5fr 0.5fr;
+}
+
+.container:has(.two:hover){
+    grid-template-columns: 0.5fr 2fr 0.5fr 0.5fr 0.5fr;
+}
+
+.container:has(.three:hover){
+    grid-template-columns: 0.5fr 0.5fr 2fr 0.5fr 0.5fr;
+}
+
+.container:has(.four:hover){
+    grid-template-columns: 0.5fr 0.5fr 0.5fr 2fr 0.5fr;
+}
+
+.container:has(.five:hover){
+    grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 2fr;
+}
+
+
+/* POSICIONAMIENTO DE LAS CAJAS */
+.container .box:first-child, .box:last-child{
+    transform: translateY(30px);
+}
+
+.container .box:nth-child(2), .box:nth-child(4){
+    transform: translateY(-30px);
+}

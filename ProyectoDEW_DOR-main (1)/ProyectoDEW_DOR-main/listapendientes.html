@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Tareas</title>
+  <link rel="stylesheet" href="./src/css/lista.css">
+</head>
+<body>
+  <!-- <header>
+    <div id="navigation">
+      <div class="nes"> <a href="index.html" target="_blank"><img src="http://i1168.photobucket.com/albums/r483/erica__Fletcher/Untitled-1_zpsfk9b0ih1.png" width="40px" height="40px"></a>
+        
+  
+        <div class="navitems">
+          <div class="index"> <a class="link" href="index.html">Inicio</a>
+          </div>
+          <div class="games"> <a class="link" href="juegos.html">Juegos</a>
+          </div>
+          <div class="productos"> <a class="link" href="productos.html">Productos</a>
+          </div>
+          <div class="personajes"><a class="link" href="personajes.html"> Personajes</a>
+          </div>
+          <div class="contacto"><a class="link" href="contacto.html"> Contacto</a>
+          </div>
+          <div class="videos"><a class="link" href="video.html"> Video</a>
+          </div>
+          <div class="lista"><a class="link" href="listapendientes.html"> Lista</a>
+          </div>
+          <div class="galeria"><a class="link" href="galeria.html"> Galeria</a>
+          </div>
+          
+        </div>
+      
+      </div>
+    </div>
+</header> -->
+
+  <input type="text" id="task-input" placeholder="Agregar nueva tarea">
+  <ul id="task-list"></ul>
+
+  <script>
+    
+    const taskInput = document.getElementById('task-input');
+    const taskList = document.getElementById('task-list');
+
+    // Funciones flecha para manejar la lógica de la lista de tareas
+    const addTask = () => {
+      const taskText = taskInput.value.trim();
+      if (taskText !== '') {
+        const taskItem = document.createElement('li');
+        taskItem.className = 'task-item';
+        taskItem.innerHTML = `
+          <span class="task-text">${taskText}</span>
+          <div class="task-buttons">
+            <button onclick="completeTask(this)">Completar</button>
+            <button onclick="deleteTask(this)">Eliminar</button>
+          </div>
+        `;
+        taskList.appendChild(taskItem);
+        taskInput.value = '';
+      }
+    };
+
+    const completeTask = (button) => {
+      const taskItem = button.closest('.task-item');
+      taskItem.classList.toggle('completed');
+      alert("Se marco como completada")
+    };
+
+    const deleteTask = (button) => {
+      const taskItem = button.closest('.task-item');
+      taskItem.remove();
+      alert("Se elimino con exito")
+    };
+
+    // Asignar funciones a eventos
+    taskInput.addEventListener('keyup', (event) => {
+      if (event.key === 'Enter') {
+        addTask();
+      }
+    });
+
+    // Llamar a las funciones para inicializar la página
+    addTask();
+    addTask();
+    addTask();
+
+
+    
+    document.addEventListener("DOMContentLoaded", function () {
+        const hamburgerMenu = document.querySelector(".hamburger-menu");
+        const mobileMenu = document.querySelector(".mobile-menu");
+
+        hamburgerMenu.addEventListener("click", function () {
+            mobileMenu.style.display = (mobileMenu.style.display === "block") ? "none" : "block";
+        });
+    });
+
+  </script>
+
+</body>
+</html>

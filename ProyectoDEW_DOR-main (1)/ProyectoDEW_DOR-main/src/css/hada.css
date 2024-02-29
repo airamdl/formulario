@@ -1,0 +1,156 @@
+body {
+	height: 100vh;
+	margin: 0;
+	display: grid;
+	place-items: center;
+	background: black;
+}
+
+.navi {
+	position: relative;
+	animation: fly 6s infinite alternate;
+}
+
+.blue {
+	margin: auto;
+	border-radius: 100%;
+	padding: 80px;
+	background-color: #fcfbff;
+	background: radial-gradient(circle, #c8fcfe 20%, #19a7ec 100%);
+	box-shadow: 0px 0px 50px 10px #19a7ec;
+	z-index: 1;
+	animation: pulse 3s infinite alternate;
+	cursor: pointer;
+	transition: 0.2s;
+}
+
+.wing {
+    &-left,
+    &-right {
+    position: absolute;
+    height: 160px;
+    width: 100px;
+    background: #fff;
+    box-shadow: 0 0 40px rgba(187, 177, 230, 1);
+    transform-origin: 50% 100%;
+    opacity: 0.8;
+    z-index: -1;
+    &--bottom {
+    position: absolute;
+    height: 60px;
+    width: 80px;
+    background: #fff;
+    box-shadow: 0 0 40px rgba(187, 177, 230, 1);
+    transform-origin: 50% 100%;
+    z-index: -1;
+    opacity: 0.8;
+    }
+    }
+    &-left {
+    top: -140px;
+    left: -0px;
+    transform: rotate(-70deg);
+    border-radius: 100% 5px 100% 10%;
+    animation: wingLeft 3s infinite;
+    &--bottom {
+    transform: rotate(-90deg);
+    border-radius: 30% 180% 25% 130%;
+    bottom: 10px;
+    left: 10px;
+    animation: wingLeft 5s infinite;
+    }
+    }
+    
+    &-right {
+    top: -150px;
+    right: -0px;
+    transform: rotate(70deg);
+    border-radius: 5px 100% 10% 100%;
+    animation: rightWing 3s infinite;
+    &--bottom {
+    transform: rotate(90deg);
+    border-radius: 180% 30% 130% 25%;
+    bottom: 10px;
+    right: 10px;
+    animation: rightWing 5s infinite;
+    }
+    }
+    }
+    Delete
+    
+
+.particle {
+	border-radius: 100%;
+	background-color: #fcfbff;
+	background: radial-gradient(circle, #c8fcfe 20%, #19a7ec 100%);
+	box-shadow: 0px 0px 30px 5px #19a7ec;
+	z-index: 1;
+	position: absolute;
+	animation: pulseParticle 3s infinite alternate;
+}
+
+@keyframes fly {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(105px);
+	}
+}
+
+@keyframes pulse {
+	0%,
+	100% {
+		transform: scale(0.9);
+	}
+	50% {
+		transform: scale(1);
+	}
+}
+
+@keyframes wingLeft {
+	0% {
+		transform: rotate(-65deg);
+	}
+	12.5% {
+		transform: rotate(-90deg);
+	}
+	25% {
+		transform: rotate(-65deg);
+	}
+	50% {
+		transform: rotate(-90deg);
+	}
+	100% {
+		transform: rotate(-65deg);
+	}
+}
+
+@keyframes rightWing {
+	0% {
+		transform: rotate(65deg);
+	}
+	12.5% {
+		transform: rotate(90deg);
+	}
+	25% {
+		transform: rotate(65deg);
+	}
+	50% {
+		transform: rotate(90deg);
+	}
+	100% {
+		transform: rotate(65deg);
+	}
+}
+
+@keyframes pulseParticle {
+	0%,
+	100% {
+		transform: scale(0);
+	}
+	50% {
+		transform: scale(1);
+	}
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generar Tablas</title>
+
+</head>
+<body>
+    <h1 id="titleTxt"></h1>
+    <script>
+        class TablasGenerador {
+    constructor() {
+      this.tabla1Data = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
+      this.tabla2Data = "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
+    }
+
+    generarTablas() {
+      const tabla1 = this.crearTabla(this.tabla1Data);
+      const tabla2 = this.crearTabla(this.tabla2Data);
+
+      document.body.appendChild(tabla1);
+      document.body.appendChild(tabla2);
+    }
+
+    crearTabla(data) {
+      const tabla = document.createElement('table');
+      tabla.style.border = "1px solid black";
+      const fila = tabla.insertRow();
+      const celda = fila.insertCell();
+      celda.textContent = data;
+      return tabla;
+    }
+  }
+
+
+  class tablaHerencia extends TablasGenerador{
+    newTxt;
+    constructor(newTxt){
+        super();
+        this.newTxt = newTxt;
+    }
+
+  }
+
+  const generador = new tablaHerencia("Texto");
+  generador.generarTablas();
+    </script>
+ 
+</body>
+</html>

@@ -1,0 +1,155 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+/* header */
+ #navigation {
+    width: 100%;
+    height: 55px;
+    position: fixed;
+    background: linear-gradient(#4D3414, #221506);
+    top: 0;
+    z-index: 1000; 
+	
+  }
+  
+  .nes{
+    padding-left: 11em;
+    padding-top: 8px;
+    position: fixed;
+    
+    
+  }
+  .geo {
+    display: inline;
+    padding: 20px;
+  }
+  .index {
+    display: inline;
+    padding: 20px;
+  }
+  .preferencias {
+    display: inline;
+    padding: 20px;
+  }
+  .video {
+    display: inline;
+    padding: 20px;
+  }
+  .form {
+    display: inline;
+    padding: 20px;
+  }
+  .index {
+    display: inline;
+    padding: 20px;
+  }
+  .cookies {
+    display: inline;
+    padding: 20px;
+  }
+  
+  .contenedor { 
+    padding-top: 70px;
+    /* text-align: center;
+    align-items: center; */
+    
+    
+  }
+
+  
+  .navitems {
+    color: white;
+    padding-top: 10px;
+    padding-right: 10em;
+    float: right;
+    font-family: tahoma;
+    overflow: cover;
+    margin: 0 auto;
+    
+  }
+  
+  a:link.link {
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+  
+  a:visited.link {
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+  
+  a:hover.link {
+    color: #0e5135;
+    text-decoration: none;
+  }
+  
+  a:active.selector_name {
+    color: #003300;
+    text-decoration: none;
+  }
+
+  /* Fin header */
+.error {
+    color: red;
+  }
+*{box-sizing:border-box;}
+body{
+    background-color: antiquewhite;
+}
+h2{
+    text-align: center;
+	padding-top: 100px;
+}
+
+form{
+	width:300px;
+	padding:16px;
+	border-radius:10px;
+	margin:auto;
+	background-color:#ccc;
+}
+
+form label{
+	width:72px;
+	font-weight:bold;
+	display:inline-block;
+}
+
+form input[type="text"],
+form input[type="email"]{
+	width:180px;
+	padding:3px 10px;
+	border:1px solid #f6f6f6;
+	border-radius:3px;
+	background-color:#f6f6f6;
+	margin:8px 0;
+	display:inline-block;
+}
+
+form input[type="submit"]{
+	width:100%;
+	padding:8px 16px;
+	margin-top:32px;
+	border:1px solid #000;
+	border-radius:5px;
+	display:block;
+	color:#fff;
+	background-color:#000;
+} 
+
+form input[type="submit"]:hover{
+	cursor:pointer;
+}
+
+textarea{
+	width:100%;
+	height:100px;
+	border:1px solid #f6f6f6;
+	border-radius:3px;
+	background-color:#f6f6f6;			
+	margin:8px 0;
+	/*resize: vertical | horizontal | none | both*/
+	resize:none;
+	display:block;
+}

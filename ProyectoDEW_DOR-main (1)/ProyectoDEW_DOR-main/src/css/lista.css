@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    text-align: center;
+  }
+
+/*  
+   #navigation {
+    width: 100%;
+    height: 55px;
+    position: fixed;
+    background: linear-gradient(#4D3414, #221506);
+    top: 0;
+    z-index: 1000; /* Agrega un valor de z-index adecuado */
+/*   
+  
+  .nes{
+    padding-left: 11em;
+    padding-top: 8px;
+    postition: fixed;
+    
+    
+  }
+  .games {
+    display: inline;
+    padding: 20px;
+  }
+  
+  .productos {
+    display: inline;
+    padding: 20px;
+  }
+  
+  .personajes  {
+    display: inline;
+    padding: 20px;
+  }
+  .index {
+    display: inline;
+    padding: 20px;
+  }
+  .contacto{
+    display: inline;
+    padding: 20px;
+  }
+
+  .videos{
+    display: inline;
+    padding: 20px;
+  }
+  .galeria{
+    display: inline;
+    padding: 20px;
+  }
+  .lista{
+    display: inline;
+    padding: 20px;
+  }
+
+  
+  .navitems {
+    color: white;
+    padding-top: 10px;
+    padding-right: 10em;
+    float: right;
+    font-family: tahoma;
+    overflow: cover;
+    margin: 0 auto;
+    
+  }
+  
+  a:link.link {
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+  
+  a:visited.link {
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+  
+  a:hover.link {
+    color: #0e5135;
+    text-decoration: none;
+  }
+  
+  a:active.selector_name {
+    color: #003300;
+    text-decoration: none;
+  } */ 
+
+
+
+  #task-input {
+    padding: 8px;
+    margin-bottom: 10px;
+  }
+  #task-list {
+    list-style: none;
+    padding: 0;
+  }
+  .task-item {
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 5px;
+  }
+  .task-item.completed {
+    text-decoration: line-through;
+    color: #777;
+  }
+  .task-buttons {
+    display: flex;
+    gap: 5px;
+  }

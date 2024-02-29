@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background: url('../../img/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    backdrop-filter: blur(5px);
+    overflow-x: hidden;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+    height: 500px;
+    transition: 0.5s;
+}
+
+.box{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-size: cover;
+    transition: 0.5s;
+}
+
+.box img{
+    width: 300px;
+    border-radius: 1em;
+}
+
+.container:hover .box{
+    filter: grayscale(1);
+}
+
+.container .box:hover{
+    filter: grayscale(0);
+}
+
+
+
+/* DESPLAZAMIENTO DE LAS CAJAS */
+
+.container:has(.one:hover){
+    grid-template-columns: 2fr 0.5fr 0.5fr 0.5fr 0.5fr;
+}
+
+.container:has(.two:hover){
+    grid-template-columns: 0.5fr 2fr 0.5fr 0.5fr 0.5fr;
+}
+
+.container:has(.three:hover){
+    grid-template-columns: 0.5fr 0.5fr 2fr 0.5fr 0.5fr;
+}
+
+.container:has(.four:hover){
+    grid-template-columns: 0.5fr 0.5fr 0.5fr 2fr 0.5fr;
+}
+
+.container:has(.five:hover){
+    grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 2fr;
+}
+
+
+/* POSICIONAMIENTO DE LAS CAJAS */
+/* .container .box:first-child, .box:last-child{
+    transform: translateY(30px);
+}
+
+.container .box:nth-child(2), .box:nth-child(4){
+    transform: translateY(-30px);
+} */

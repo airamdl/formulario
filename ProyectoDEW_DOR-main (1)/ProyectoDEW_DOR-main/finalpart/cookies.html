@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contador de Visitas</title>
+<link rel="stylesheet" href="./css/cookies.css">
+</head>
+<body>
+    <header>
+        <div id="navigation">
+          <div class="nes"> <a href="../index.html" target="_blank"><img src="http://i1168.photobucket.com/albums/r483/erica__Fletcher/Untitled-1_zpsfk9b0ih1.png" width="40px" height="40px"></a>
+            
+            
+              <div class="navitems">
+                <div class="index"> <a class="link" href="../index.html">Inicio</a>
+                </div>
+                <div class="geo"> <a class="link" href="geolocalizacion.html">Geolocalización</a>
+                </div>
+                <div class="preferencias"> <a class="link" href="preferencias.html">Preferencias</a>
+                </div>
+                <div class="video"> <a class="link" href="./video.html">Video</a>
+                </div>
+                <div class="form"> <a class="link" href="./form.html">Formulario</a>
+                </div>
+                <div class="index"> <a class="link" href="./indexdb.html">indexdb</a>
+                </div>
+                <div class="cookies"> <a class="link" href="./cookies.html">Cookies</a>
+                </div>
+              </div>
+          </div>
+      </header>
+<div class="contenedor">
+    <h1>Bienvenido a la página</h1>
+    <p>Esta página ha sido visitada <span id="visitCount">0</span> veces.</p>
+
+    <div id="cookieDialog" style="display: none;">
+        <p>¿Acepta el uso de cookies?</p>
+        <button id="acceptCookies">Sí</button>
+        <button id="rejectCookies">No</button>
+    </div>
+</div>
+    <script>
+        function setCookie(name, value, days) {
+            var expires = "";
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "") + expires + "; path=/";
+        }
+
+        function getCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for(var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+
+        function incrementVisitCount() {
+            var visitCount = parseInt(getCookie('visitCount')) || 0;
+            visitCount++;
+            setCookie('visitCount', visitCount, 365); // La cookie expira en 365 días
+            return visitCount;
+        }
+
+        function displayVisitCount() {
+            var visitCount = incrementVisitCount();
+            document.getElementById('visitCount').textContent = visitCount;
+        }
+
+        window.onload = function() {
+            var cookieDialog = document.getElementById('cookieDialog');
+            var acceptCookiesBtn = document.getElementById('acceptCookies');
+            var rejectCookiesBtn = document.getElementById('rejectCookies');
+
+            acceptCookiesBtn.addEventListener('click', function() {
+                cookieDialog.style.display = 'none';
+                displayVisitCount();
+            });
+
+            rejectCookiesBtn.addEventListener('click', function() {
+                cookieDialog.style.display = 'none';
+            });
+
+            if (!getCookie('cookiesAccepted')) {
+                cookieDialog.style.display = 'block';
+            } else {
+                displayVisitCount();
+            }
+        };
+    </script>
+</body>
+</html>

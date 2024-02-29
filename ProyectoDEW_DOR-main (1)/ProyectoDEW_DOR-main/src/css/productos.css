@@ -1,0 +1,389 @@
+
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  #navigation {
+    width: 100%;
+    height: 55px;
+    position: fixed;
+    background: linear-gradient(#4D3414, #221506);
+    top: 0;
+    z-index: 1000; /* Agrega un valor de z-index adecuado */
+  }
+  
+  .nes{
+    padding-left: 11em;
+    padding-top: 8px;
+    postition: fixed;
+    
+    
+  }
+  .games {
+    display: inline;
+    padding: 20px;
+  }
+  
+  .productos {
+    display: inline;
+    padding: 20px;
+  }
+  
+  .personajes  {
+    display: inline;
+    padding: 20px;
+  }
+  .index {
+    display: inline;
+    padding: 20px;
+  }
+  .contacto{
+    display: inline;
+    padding: 20px;
+  }
+
+  .videos{
+    display: inline;
+    padding: 20px;
+  }
+  .galeria{
+    display: inline;
+    padding: 20px;
+  }
+  .lista{
+    display: inline;
+    padding: 20px;
+  }
+
+  
+  .navitems {
+    color: white;
+    padding-top: 10px;
+    padding-right: 10em;
+    float: right;
+    font-family: tahoma;
+    overflow: cover;
+    margin: 0 auto;
+    
+  }
+  
+  a:link.link {
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+  
+  a:visited.link {
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+  
+  a:hover.link {
+    color: #0e5135;
+    text-decoration: none;
+  }
+  
+  a:active.selector_name {
+    color: #003300;
+    text-decoration: none;
+  }
+/* meadiquery nav */
+@media screen and (max-width: 1150px) {
+  .navitems {
+      display: none;
+  }
+
+  .hamburger-menu {
+      display: block;
+      cursor: pointer;
+      padding: 20px;
+  }
+
+  .bar {
+      width: 25px;
+      height: 3px;
+      background-color: #FFF;
+      margin: 6px 0;
+  }
+
+  .mobile-menu {
+      display: none;
+      background: linear-gradient(#4D3414, #221506);
+      position: fixed;
+      top: 55px;
+      left: 0;
+      width: 100%;
+      text-align: center;
+  }
+
+  .mobile-menu a {
+      display: block;
+      padding: 20px;
+      color: white;
+      text-decoration: none;
+  }
+}
+
+  
+  #content {
+    margin-top: 55px;
+  }
+  
+  body {
+    background: linear-gradient(#0e5135, black);
+    background-repeat: no-repeat;
+    height: 1250px;
+  }
+  
+  .hero {
+    width: 100%;
+  }
+  
+  .banner {
+    background-image: url(http://cdn2.pu.nl/media/games/zelda_wii_u/legend-of-zelda-wii-u.jpg);
+    background-size: cover;
+    width: 80%;
+    height: 400px;
+    margin: 0 auto;
+    background-position: center;
+    overflow: cover;
+    background-repeat: no-repeat;
+    font-size: 6vw;
+    text-align: center;
+    padding-top: 120px;
+    font-family: Cinzel Decorative;
+    font-weight: 700;
+    color: #C90024;
+    text-shadow: 2px 5px 4px black;
+  }
+
+  .animate {
+    animation: slide 5s linear;
+  }
+
+  @keyframes slide {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  
+  .lg {
+    color: #714C1D;
+    font-family: Cinzel Decorative;
+    text-align: center;
+    font-size: 1.5em;
+    padding-top: 10px;
+    text-shadow: 0px 0px 4px black;
+  }
+  
+  .products {
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 10px
+  }
+  
+  .col-1-3 {
+    width: 33.33333%;
+  }
+  
+  .col-2-3 {
+    width: 66.66%;
+  }
+  
+  [class*='col-'] {
+    float: left;
+    overflow: hidden;
+    border: px solid red;
+  }
+  
+  .products>.product {
+    min-height: 100px;
+  }
+  
+  .row {
+    width: 100%;
+  }
+  
+  .row>.product {
+    min-height: 100px;
+  }
+  
+  .row>.product>.product-wrapper {
+    padding: 10px;
+  }
+  
+  .description{
+  padding: 15px;
+    color: #4D5414;
+  text-align: left;
+    font-family: Tahoma;
+    font-size: 0.8em;
+  }
+  
+  .triforceheroes {
+    background-image: url(https://m.media-amazon.com/images/I/51zUayhia2L.jpg);
+    height: 400px;
+    width: 100%;
+    overflow: cover;
+    background-position: center;
+    text-align: center;
+    padding-top: 6px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 5px solid #714C1D;
+  }
+  
+  .hyrulewarriors {
+    background-image: url(https://www.guiasnintendo.com/2c-switch/hyrule-warriors-definitive-edition/guia-hyrule-warriors-definitive-edition/imagenes/fotos/hyrule-warriors-switch-01130.jpg);
+    height: 400px;
+    width: 100%;
+    overflow: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 5px solid #714C1D;
+  }
+  
+  .ALBW {
+    background-image: url(https://m.media-amazon.com/images/I/61MymBg3PqS._AC_UF1000,1000_QL80_.jpg);
+    height: 400px;
+    width: 100%;
+    overflow: cover;
+    background-position: right;
+    color: red;
+    background-repeat: no-repeat;
+    background-size: cover;
+     border: 5px solid #714C1D;
+  }
+  
+  .albwlogo {
+    text-align: center;
+    padding-top: 3px;
+  }
+  
+  .hwlogo {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 13px;
+  }
+  
+  .thlogo {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+  
+  .click {
+    text-align: center;
+    color: #4D5414;
+    font-family: Tahoma;
+  }
+
+
+
+  
+footer{
+  margin-top: 700px;
+  background: linear-gradient(#4D3414, #221506);
+  padding: 15px;
+}
+
+
+.rounded-social-buttons {
+  text-align: center;
+}
+
+.rounded-social-buttons .social-button {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  width: 3.125rem;
+  height: 3.125rem;
+  border: 0.125rem solid transparent;
+  padding: 0;
+  text-decoration: none;
+  text-align: center;
+  color: #fefefe;
+  font-size: 1.5625rem;
+  font-weight: normal;
+  line-height: 2em;
+  border-radius: 1.6875rem;
+  transition: all 0.5s ease;
+  margin-right: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.rounded-social-buttons .social-button:hover, .rounded-social-buttons .social-button:focus {
+  -webkit-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.rounded-social-buttons .fa-twitter, .fa-facebook-f, .fa-linkedin, .fa-tiktok, .fa-youtube, .fa-instagram {
+  font-size: 25px;
+}
+
+.rounded-social-buttons .social-button.facebook {
+  background: #3b5998;
+}
+
+.rounded-social-buttons .social-button.facebook:hover, .rounded-social-buttons .social-button.facebook:focus {
+  color: #3b5998;
+  background: #fefefe;
+  border-color: #3b5998;
+}
+
+.rounded-social-buttons .social-button.twitter {
+  background: #55acee;
+}
+
+.rounded-social-buttons .social-button.twitter:hover, .rounded-social-buttons .social-button.twitter:focus {
+  color: #55acee;
+  background: #fefefe;
+  border-color: #55acee;
+}
+
+.rounded-social-buttons .social-button.linkedin {
+  background: #007bb5;
+}
+
+.rounded-social-buttons .social-button.linkedin:hover, .rounded-social-buttons .social-button.linkedin:focus {
+  color: #007bb5;
+  background: #fefefe;
+  border-color: #007bb5;
+}
+
+.rounded-social-buttons .social-button.tiktok {
+  background: #000000;
+}
+
+.rounded-social-buttons .social-button.tiktok:hover, .rounded-social-buttons .social-button.tiktok:focus {
+  color: #000000;
+  background: #fefefe;
+  border-color: #000000;
+}
+
+.rounded-social-buttons .social-button.youtube {
+  background: #bb0000;
+}
+
+.rounded-social-buttons .social-button.youtube:hover, .rounded-social-buttons .social-button.youtube:focus {
+  color: #bb0000;
+  background: #fefefe;
+  border-color: #bb0000;
+}
+
+.rounded-social-buttons .social-button.instagram {
+  background: #125688;
+}
+
+.rounded-social-buttons .social-button.instagram:hover, .rounded-social-buttons .social-button.instagram:focus {
+  color: #125688;
+  background: #fefefe;
+  border-color: #125688;
+}  
+  

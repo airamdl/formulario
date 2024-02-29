@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juegos</title>
+    <link rel="stylesheet" href="./src/css/juegos.css">
+    <link rel="stylesheet" href="./src/css/style.css">
+</head>
+<body>
+  
+
+    <main>
+        <ul class='slider'>
+            <li class='item' style="background-image: url('https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_7/SI_N64_LegendOfZeldaOcarinaOfTime_image1600w.jpg')">
+                <div class='content'>
+                  <h2 class='title'>"The Legend of Zelda: Ocarina of Time (1998)"</h2>
+                  <p class='description'> Considerado por muchos como uno de los mejores juegos de todos los tiempos, "Ocarina of Time" sigue la historia de Link mientras viaja en el tiempo para detener al malvado Ganondorf y salvar el reino de Hyrule.  </p>
+                  <button>Read More</button>
+                </div>
+              </li>
+              <li class='item' style="background-image: url('https://zelda.nintendo.com/breath-of-the-wild/assets/media/wallpapers/desktop-1.jpg')">
+                <div class='content'>
+                  <h2 class='title'>"he Legend of Zelda: Breath of the Wild (2017)"</h2>
+                  <p class='description'> Con un enfoque de mundo abierto, "Breath of the Wild" sigue a Link en su misión de derrotar a Calamity Ganon y salvar a la Princesa Zelda y al reino de Hyrule.  </p>
+                  <button>Read More</button>
+                </div>
+              </li>
+              <li class='item' style="background-image: url('https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_3ds_25/SI_3DS_TheLegendOfZeldaMajorasMask3D_image1600w.png')">
+                <div class='content'>
+                  <h2 class='title'>"The Legend of Zelda: Majora's Mask (2000)"</h2>
+                  <p class='description'> Secuela de "Ocarina of Time", este juego sigue a Link mientras intenta detener la caída de la luna en Termina en un ciclo de tres días, enfrentándose a una variedad de máscaras y desafíos.  </p>
+                  <button>Read More</button>
+                </div>
+              </li>
+              <li class='item' style="background-image: url('https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/games_15/wiiu_14/SI_WiiU_TheLegendOfZeldaTwilightPrincessHD_image1600w.jpg')">
+                <div class='content'>
+                  <h2 class='title'>"The Legend of Zelda: Twilight Princess (2006)"</h2>
+                  <p class='description'>
+                    En "Twilight Princess", Link se transforma en un lobo y debe luchar contra las fuerzas del Crepúsculo para salvar Hyrule de la corrupción. También presenta a Midna, una misteriosa criatura.                  </p>
+                  <button>Read More</button>
+                </div>
+              </li>
+              <li class='item' style="background-image: url('https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/games_15/wiiu_14/SI_WiiU_TheLegendofZeldaTheWindWakerHD_image1600w.jpg')">
+                <div class='content'>
+                  <h2 class='title'>"The Legend of Zelda: Wind Waker (2002):"</h2>
+                  <p class='description'>
+                    "Wind Waker" sigue a Link en su búsqueda para rescatar a su hermana y derrotar al malvado Ganondorf en un vasto océano. Destaca por su estilo artístico único y el uso del viento para navegar.
+                     </p>
+                  <button>Read More</button>
+                </div>
+              </li>
+              <li class='item' style="background-image: url('https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/games_15/wii_24/SI_Wii_TheLegendOfZeldaSkywardSword_image1600w.jpg')">
+                <div class='content'>
+                  <h2 class='title'>"The Legend of Zelda: Skyward Sword (2011)"</h2>
+                  <p class='description'> En "The Legend of Zelda: Skyward Sword", los jugadores asumen el papel de Link, un joven habitante de Skyloft, una isla flotante en el cielo. La historia comienza con Link en la academia Skyloft, donde él y su amiga de la infancia, Zelda, descubren un oscuro complot que involucra a criaturas malévolas y un mundo subterráneo conocido como "The Surface".  </p>
+                  <button>Read More</button>
+                </div>
+              </li>
+        </ul>
+        <nav class='nav'>
+            <ion-icon class='btn prev' name="arrow-back-outline"></ion-icon>
+            <ion-icon class='btn next' name="arrow-forward-outline"></ion-icon>
+        </nav>
+    </main>
+    
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const slider = document.querySelector('.slider');
+
+            function activate(e) {
+                const items = document.querySelectorAll('.item');
+                e.target.matches('.next') && slider.append(items[0]);
+                e.target.matches('.prev') && slider.prepend(items[items.length - 1]);
+            }
+
+            document.addEventListener('click', activate, false);
+        });
+
+        
+    document.addEventListener("DOMContentLoaded", function () {
+        const hamburgerMenu = document.querySelector(".hamburger-menu");
+        const mobileMenu = document.querySelector(".mobile-menu");
+
+        hamburgerMenu.addEventListener("click", function () {
+            mobileMenu.style.display = (mobileMenu.style.display === "block") ? "none" : "block";
+        });
+    });
+
+    </script>
+
+
+
+</body>
+</html>

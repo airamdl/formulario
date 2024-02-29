@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <header>
+    <div id="navigation">
+      <div class="nes"> <a href="index.html" target="_blank"><img src="http://i1168.photobucket.com/albums/r483/erica__Fletcher/Untitled-1_zpsfk9b0ih1.png" width="40px" height="40px"></a>
+        
+  
+        <div class="navitems">
+          <div class="index"> <a class="link" href="index.html">Inicio</a>
+          </div>
+          <div class="games"> <a class="link" href="juegos.html">Juegos</a>
+          </div>
+          <div class="productos"> <a class="link" href="productos.html">Productos</a>
+          </div>
+          <div class="personajes"><a class="link" href="personajes.html"> Personajes</a>
+          </div>
+          <div class="contacto"><a class="link" href="contacto.html"> Contacto</a>
+          </div>
+          <div class="videos"><a class="link" href="video.html"> Video</a>
+          </div>
+          <div class="lista"><a class="link" href="listapendientes.html"> Lista</a>
+          </div>
+          <div class="galeria"><a class="link" href="galeria.html"> Galeria</a>
+          </div>
+          
+        </div>
+      
+      </div>
+      <div class="hamburger-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+</div>
+<div class="mobile-menu">
+  
+    <div class="index"> <a class="link" href="index.html">Inicio</a>
+    </div>
+    <div class="games"> <a class="link" href="juegos.html">Juegos</a>
+    </div>
+    <div class="productos"> <a class="link" href="productos.html">Productos</a>
+    </div>
+    <div class="personajes"><a class="link" href="personajes.html"> Personajes</a>
+    </div>
+    <div class="contacto"><a class="link" href="contacto.html"> Contacto</a>
+    </div>
+    <div class="videos"><a class="link" href="video.html"> Video</a>
+    </div>
+    <div class="lista"><a class="link" href="listapendientes.html"> Lista</a>
+    </div>
+    <div class="galeria"><a class="link" href="galeria.html"> Galeria</a>
+    </div>
+
+    </div>
+</header>
+    <h1>Old heading text</h1>
+    <a href="#">Link</a>
+    <div id="container"></div>
+    <div id="unwanted">This is an unwanted div</div>
+
+    <script>
+      
+
+        let heading = document.querySelector('h1');
+        heading.textContent = 'New heading text';
+
+        let link = document.querySelector('a');
+        link.setAttribute('href', 'https://www.example.com');
+
+        let newDiv = document.createElement('div');
+        newDiv.textContent = 'This is a new div';
+
+        let container = document.querySelector('#container');
+        container.appendChild(newDiv);
+
+        let unwantedDiv = document.querySelector('#unwanted');
+        unwantedDiv.parentNode.removeChild(unwantedDiv);
+    </script>
+    <footer>
+        <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
+
+        <div class="rounded-social-buttons">
+                          <a class="social-button facebook" href="https://www.facebook.com/Airamdlp" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                          <a class="social-button twitter" href="https://www.twitter.com/Airamdl_" target="_blank"><i class="fab fa-twitter"></i></a>
+                          <a class="social-button linkedin" href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                          <a class="social-button tiktok" href="https://www.tiktok.com/airamlp89" target="_blank"><i class="fab fa-tiktok"></i></a>
+                          <a class="social-button youtube" href="https://www.youtube.com/Airamdl" target="_blank"><i class="fab fa-youtube"></i></a>
+                          <a class="social-button instagram" href="https://www.instagram.com/Airamdlp" target="_blank"><i class="fab fa-instagram"></i></a>
+                      </div>
+      </footer>
+</body>
+</html>

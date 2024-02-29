@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Validación de Formulario</title>
+<script src="./js/form.js"></script>
+<link rel="stylesheet" href="./css/form.css">
+</head>
+<body>
+  <header>
+    <div id="navigation">
+      <div class="nes"> <a href="../index.html" target="_blank"><img src="http://i1168.photobucket.com/albums/r483/erica__Fletcher/Untitled-1_zpsfk9b0ih1.png" width="40px" height="40px"></a>
+        
+        
+          <div class="navitems">
+            <div class="index"> <a class="link" href="../index.html">Inicio</a>
+            </div>
+            <div class="geo"> <a class="link" href="geolocalizacion.html">Geolocalización</a>
+            </div>
+            <div class="preferencias"> <a class="link" href="preferencias.html">Preferencias</a>
+            </div>
+            <div class="video"> <a class="link" href="./video.html">Video</a>
+            </div>
+            <div class="form"> <a class="link" href="./form.html">Formulario</a>
+            </div>
+            <div class="index"> <a class="link" href="./indexdb.html">indexdb</a>
+            </div>
+            <div class="cookies"> <a class="link" href="./cookies.html">Cookies</a>
+            </div>
+          </div>
+      </div>
+  </header>
+
+  
+<h2>Formulario</h2>
+
+<!-- <form id="miFormulario" onsubmit="return validarFormulario()">
+    <input type="text" id="nombre" placeholder="Nombre">
+    <input type="email" id="correo" placeholder="Correo Electrónico">
+    <textarea id="mensaje" placeholder="Mensaje"></textarea>
+    <button type="submit">Enviar</button>
+  </form> -->
+  
+
+<form id="formulario" onsubmit="return validarFormulario()" action="https://formsubmit.co/airamdl2001@gmail.com" method="post">
+  <div>
+    <label for="nombre">Nombre:</label><br>
+    <input type="text" id="nombre" name="nombre" onkeyup="validarNombre()">
+    <span id="errorNombre" class="error"></span>
+  </div>
+  <div>
+    <label for="email">Correo electrónico:</label><br>
+    <input type="email" id="email" name="email" onkeyup="validarEmail()">
+    <span id="errorEmail" class="error"></span>
+  </div>
+  <div>
+    <label for="mensaje">Mensaje:</label><br>
+    <textarea id="mensaje" name="mensaje" onkeyup="validarMensaje()"></textarea>
+    <span id="errorMensaje" class="error"></span>
+  </div>
+  <div>
+    <button type="submit">Enviar</button>
+  </div>
+
+  <input type="hidden" name="_captcha" value="true">
+</form>
+
+
+
