@@ -3,9 +3,11 @@ const $play = document.querySelector('#play')
 const $pause = document.querySelector('#pause')
 const $backward = document.querySelector('#backward')
 const $forward = document.querySelector('#forward')
+const $fullscreen = document.querySelector('#fullscreen')
 
 $play.addEventListener('click', handlePlay)
 $pause.addEventListener('click', handlePause)
+$fullscreen.addEventListener('click', handleFullscreen)
 
 function handlePlay() {
   $video.play()
@@ -46,6 +48,15 @@ function handleLoaded() {
   console.log('ha cargado mi video', $video.duration)
 }
 
+function handleFullscreen() {
+  if ($video.requestFullscreen) {
+    $video.requestFullscreen();
+  } else if ($video.webkitRequestFullscreen) { 
+    $video.webkitRequestFullscreen();
+  } else if ($video.msRequestFullscreen) { 
+    $video.msRequestFullscreen();
+  }
+}
 function handleTimeUpdate() {
   $progress.value = $video.currentTime
   // console.log('tiempo actual', $video.currentTime)
